@@ -19,3 +19,8 @@
  .drawer-menu a:nth-of-type(2),.drawer-menu a:nth-of-type(3){padding-left:24px!important}
  .drawer-menu .mobile-nav-label{display:block!important;flex:none!important;align-self:stretch!important;width:100%!important;text-align:left!important;margin:19px 0 7px!important;padding:0 8px!important;font:600 10px/1.4 Montserrat,Arial,sans-serif!important;letter-spacing:.18em!important}
 }
+
+/* Corrección de posición del menú en iPhone / Safari: fijado al viewport */
+@media(max-width:850px){
+ .drawer-menu:not([hidden]){position:fixed!important;top:70px!important;left:0!important;right:auto!important;bottom:auto!important;z-index:9999!important;max-height:calc(100dvh - 70px)!important;overscroll-behavior:contain!important;}
+}
